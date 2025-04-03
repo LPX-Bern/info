@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="LPX-Bern is a Dynamic Global Vegetation Model (DGVM) that simulates land surface processes and greenhouse gas exchanges.">
+  <meta name="keywords" content="land surface model, terrestrial biosphere model, carbon cycle, nitrogen cycle, greenhouse gases">
+  <meta name="author" content="Qing Sun">
+  <meta property="og:title" content="LPX-Bern Model">
+  <meta property="og:description" content="LPX-Bern is a Dynamic Global Vegetation Model (DGVM) that simulates land surface processes and greenhouse gas exchanges.">
+  <meta property="og:url" content="https://lpx-bern.github.io/info/about">
+  <title>LPX-Bern model</title>
+  <link rel="stylesheet" href="assets/style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</head>
+<script src="assets/js/script.js"></script>
+<body>
+  <div id="header"></div>
+  <main>
+    <section class="page-section">
+      <h2>The LPX-Bern Model</h2>
+      <p>
+        LPX-Bern (“Land surface Processes and eXchanges” model of the University of Bern) is a Dynamic Global Vegetation Model (DGVM) of intermediate complexity, developed from the LPJ model <a href="#sitch2003">(Sitch et al., 2003)</a>. It simulates terrestrial vegetation dynamics and biogeochemical processes of various land covers, including the area under anthropogenic use <a href="#strassmann2008">(Strassmann et al., 2008;</a> <a href="#stocker2011">Stocker et al., 2011)</a> and peatland <a href="#wania2009">(Wania et al., 2009)</a>, as one of the few DGVMs with global peatland representation <a href="#spahni2013">(Spahni et al., 2013;</a> <a href="#stocker2014">Stocker et al., 2014;</a> <a href="#mueller2020">Müller and Joos, 2020)</a>. 
+        The model represents vegetation as various plant functional types that compete for resources such as water, light, and nitrogen. It uses a vertically resolved soil hydrology, heat diffusion, and an interactive thawing–freezing scheme <a href="#wania2009">(Wania et al., 2009)</a>.
+      </p>
+      <div class="decorative-divider">
+        <span class="divider-icon">🌍</span>
+      </div>
+      <p>
+        LPX-Bern is spatially and temporally constrained by observational records from preindustrial era to present-day. It has fully coupled water, carbon, and nitrogen cycles, and has the unique capacity to explicitly simulate multiple greenhouse gases (H<sub>2</sub>O, CO<sub>2</sub>, CH<sub>4</sub>, N<sub>2</sub>O) as well as carbon isotopes <a href="#stocker2013">(Stocker et al., 2013)</a>. In addition to research on the recent past from seasonal to centennial scales <a href="#sun2024">(Sun et al., 2024)</a>, LPX-Bern is especially well-suited to conduct long-term past-to-future experiments on millennial to glacial-interglacial timescales due to its cost-efficient nature <a href="#ruosch2016">(Ruosch et al., 2016;</a> <a href="#joos2020">Joos et al., 2020;</a> <a href="#mueller2021">Müller and Joos, 2021)</a>. Large parameter ensembles can be readily performed for uncertainty assessments and probabilistic future projections, as well as direct model-data comparisons to constrain and validate the model performance <a href="#lienert2018">(Lienert and Joos, 2018)</a>.
+      </p>
+      <div class="decorative-divider">
+        <span class="divider-icon">🌿</span>
+      </div>
+      <h3>CO<sub>2</sub></h3>
+      <p>
+        LPX-Bern is applied to investigate the impacts of climate and land use change on terrestrial carbon cyle. The model simulates carbon uptake from atmospheric CO<sub>2</sub> through photosinthesis, scaling up from the leaf level to the canopy level, which allows for estimation of net primary productivity across ecosystems. Carbon is also released back to the atmosphere through heterotrophic respiration and mineralisation processes <a href="#sitch2003">(Sitch et al., 2003)</a>. LPX-Bern accounts for disturbances, such as fire, inundation, and human induced landuse change, on the carbon cycling. The model contributes to the Trends in Net Land-Atmosphere Carbon Exchange project (TRENDY, <a href="#sitch2024"> Sitch et al. 2024</a>) and the <a href="https://globalcarbonbudget.org/" target="_blank" rel="noopener noreferrer">Global Carbon Project</a>. 
+      </p>
+      <div class="decorative-divider">
+        <!-- <span class="divider-icon">🌡️</span> -->
+          <span class="divider-icon">🦆</span>
+      </div>
+      <h3>CH<sub>4</sub></h3>
+      <p>
+        Surface methane (CH<sub>4</sub>) exchanges can be simulated for various ecosystems in LPX-Bern <a href="#spahni2011">(Spahni et al., 2011)</a>, including peatlands, inundated wetlands, wet mineral soils, as well as rice paddies for CH<sub>4</sub> emissions, and dry mineral soils for CH<sub>4</sub> uptake. The fractional area relevant for CH<sub>4</sub> exchanges can be either be prescribed or dynamically calculated over time using the DYPTOP approach <a href="#stocker2014">(Stocker et al., 2014)</a>. LPX-Bern contributes to the <a href="https://www.globalcarbonproject.org/methanebudget/index.htm" target="_blank" rel="noopener noreferrer">Global Methane Budget</a>. 
+      </p>
+      <div class="decorative-divider">
+        <span class="divider-icon">🌾</span>
+      </div>
+      <h3>N<sub>2</sub>O</h3>
+      <p>
+          The dynamic nitreogen module in LPX-Bern includes the nitrogen fluxes and pools for plants and soils. The nitrogen inputs from biological nitrogen fixation and rock weathering are implied by maintaining prescribed soil C:N ratios associated with each plant functional type, which reflect litter chemistry and decomposer activies. Plant growth in LPX-Bern is therefore not directly limited by external nitrogen inputs but also by the rate of nitrogen mineralisation. The total global nitrous oxide (N<sub>2</sub>O) emissions simulated by LPX-Bern depend on the model parameterisation for the nitrogen fraction emitted as N<sub>2</sub>O during nitrification, denitrification, and nitrogen leaching in runoff <a href="#xu-ri2008">(Xu-Ri and Prentice, 2008</a>). LPX-Bern contributes to the <a href="https://www.globalcarbonproject.org/nitrousoxidebudget/index.htm" target="_blank" rel="noopener noreferrer">Global Nitrogen/Nitrous Oxide Budget</a> project.
+      </p>
+      <div class="decorative-divider">
+        <!-- <span class="divider-icon">🍂</span> -->
+        <span class="divider-icon">🌱</span>
+      </div>
+      <h3>Peat</h3>
+      <p>
+        LPX-Bern simulates the dynamics of peatland area and carbon storage, as well as the effects of climate change and land use on peatland carbon dynamics. The model can be used to assess the potential for peatlands to sequester carbon and mitigate climate change, as well as the carbon emissions from peatland degradation (<a href="#mueller2020">Müller and Joos, 2020</a>). It is also used to assess the impacts of climate change on peatland hydrology. LPX-Bern is valuable for understanding the role of peatlands in the carbon cycle and for developing strategies to conserve and restore peatland ecosystems. The model contributes global peatland dynamics, from preindustrial period to future scenarios, to the peat sector of <a href="https://www.isimip.org/" target="_blank" rel="noopener noreferrer">Inter-Sectoral Impact Model Intercomparison Project (ISIMIP)</a> and peatland carbon change under anthropogenic landuse to the <a href="https://globalcarbonbudget.org/" target="_blank" rel="noopener noreferrer">Global Carbon Project</a>.
+      </p>
+      <div class="decorative-divider">
+        <span class="divider-icon">🌲</span>
+      </div>
+      <h3>Oxygen isotope ratios</h3>
+      <p>
+        LPX-Bern is implemented with oxygen isotope ratios in tree ring cellulose <a href="#keel2016">(Keel et al., 2016)</a>.
+      </p>
+    </section>
+
+    <section class="bibliography">
+      <h2>References</h2>
+      <ul>
+        <li id="joos2020">
+          Joos, F., R. Spahni, B.D. Stocker, S. Lienert, J. Muller, H. Fischer, J. Schmitt, I.C. Prentice, B. Otto-Bliesner, and Z.Y. Liu, N<sub>2</sub>O changes from the Last Glacial Maximum to the preindustrial - Part 2: terrestrial N<sub>2</sub>O emissions and carbon-nitrogen cycle interactions. Biogeosciences, 2020. 17(13): p. 3511-3543.
+          <a href="https://doi.org/10.5194/bg-17-3511-2020" target="_blank" rel="noopener noreferrer">[DOI]</a>
+        </li>
+        <li id="keel2016">
+          Keel, S.G., F. Joos, R. Spahni, and M. Saurer, A new model for the oxygen isotope ratio of tree-ring cellulose: a case study for the Swiss Alps. Biogeosciences, 2016. 13(4): p. 1027-1042.
+          <a href="https://doi.org/10.5194/bg-13-1027-2016" target="_blank" rel="noopener noreferrer">[DOI]</a>
+        </li>
+        <li id="lienert2018">
+          Lienert, S. and F. Joos, A Bayesian ensemble data assimilation to constrain model parameters and land-use carbon emissions. Biogeosciences, 2018. 15(9): p. 2909-2930.
+          <a href="https://doi.org/10.5194/bg-15-2909-2018" target="_blank" rel="noopener noreferrer">[DOI]</a>
+        </li>
+        <li id="mueller2021">
+          Müller, J. and F. Joos, Committed and projected future changes in global peatlands – continued transient model simulations since the Last Glacial Maximum. Biogeosciences, 2021. 18(12): p. 3657-3687.
+          <a href="https://doi.org/10.5194/bg-18-3657-2021" target="_blank" rel="noopener noreferrer">[DOI]</a>
+        </li>
+        <li id="mueller2020">
+          Müller, J. and F. Joos, Global peatland area and carbon dynamics from the Last Glacial Maximum to the present – a process-based model investigation. Biogeosciences, 2020. 17(21): p. 5285-5308.
+          <a href="https://doi.org/10.5194/bg-17-5285-2020" target="_blank" rel="noopener noreferrer">[DOI]</a>
+        </li>
+        <li id="ruosch2016">
+          Ruosch, M., R. Spahni, F. Joos, P.D. Henne, W.O. Van der Knaap, and W. Tinner, Past and future evolution of Abies alba forests in Europe - comparison of a dynamic vegetation model with palaeo data and observations. Global Change Biology, 2016. 22(2): p. 727-740.
+          <a href="https://doi.org/10.1111/gcb.13075" target="_blank" rel="noopener noreferrer">[DOI]</a>
+        </li>
+        <li id="saurer2014">
+          Saurer, M., F. Joos, and R. Spahni, Water use efficiency of terrestrial ecosystems inferred from carbon and oxygen isotope ratios of tree rings. Global Biogeochemical Cycles, 2014. 28(3): p. 274-285.
+          <a href="https://doi.org/10.1002/2013GB004706" target="_blank" rel="noopener noreferrer">[DOI]</a>
+        </li>
+        <li id="sitch2003">
+          Sitch, S., B. Smith, I.C. Prentice, M. Cramer, P. Kaplan, W. Lucht, S. Sykes, and D. Thonicke, Evaluation of ecosystem dynamics, plant geography and terrestrial carbon cycling in the LPJ dynamic global vegetation model. Global Change Biology, 2003. 9(2): p. 161-185.
+          <a href="https://doi.org/10.1046/j.1365-2486.2003.00569.x" target="_blank" rel="noopener noreferrer">[DOI]</a>
+        </li>
+        <li id="sitch2024">
+          Sitch, S., M. O’Sullivan, E. Robertson, P. Friedlingstein, C. Albergel, P. Anthoni, A. Arneth, V.K. Arora, A. Bastos, V. Bastrikov, N. Bellouin, J.G. Canadell, L. Chini, P. Ciais, S. Falk, I. Harris, G. Hurtt, A. Ito, A.K. Jain, M.W. Jones, F. Joos, E. Kato, D. Kennedy, K. Klein Goldewijk, E. Kluzek, J. Knauer, P.J. Lawrence, D. Lombardozzi, J.R. Melton, J.E.M.S. Nabel, N. Pan, P. Peylin, J. Pongratz, B. Poulter, T.M. Rosan, Q. Sun, H. Tian, A.P. Walker, U. Weber, W. Yuan, X. Yue, and S. Zaehle, Trends and Drivers of Terrestrial Sources and Sinks of Carbon Dioxide: An Overview of the TRENDY Project. Global Biogeochemical Cycles, 2024. 38(7): p. e2024GB008102.
+          <a href="https://doi.org:https://doi.org/10.1029/2024GB008102" target="_blank" rel="noopener noreferrer">[DOI]</a>
+        <li id="spahni2011">
+          Spahni, R., F. Joos, B.D. Stocker, M. Steinacher, and Z.C. Yu, Transient simulations of atmospheric methane and nitrous oxide over the last 8000 years. Global Biogeochemical Cycles, 2011. 25(3).
+          <a href="https://doi.org/10.1029/2010GB003848" target="_blank" rel="noopener noreferrer">[DOI]</a>
+        </li>
+        <li id="spahni2013">
+          Spahni, R., F. Joos, B.D. Stocker, M. Steinacher, and Z.C. Yu, Transient simulations of the carbon and nitrogen dynamics in northern peatlands: from the Last Glacial Maximum to the 21st century. Climate of the Past, 2013. 9(3): p. 1287-1308.
+          <a href="https://doi.org/10.5194/cp-9-1287-2013" target="_blank" rel="noopener noreferrer">[DOI]</a>
+        </li>
+        <li id="stocker2011">
+          Stocker, B.D., K. Strassmann, and F. Joos, Sensitivity of Holocene atmospheric CO<sub>2</sub> and the modern carbon budget to early human land use: analyses with a process-based model. Biogeosciences, 2011. 8(1): p. 69-88.
+          <a href="https://doi.org/10.5194/bg-8-69-2011" target="_blank" rel="noopener noreferrer">[DOI]</a>
+        </li>
+        <li id="stocker2013">
+          Stocker, B.D., R. Roth, F. Joos, R. Spahni, M. Steinacher, S. Zaehle, L. Bouwman, R. Xu, and I.C. Prentice, Multiple greenhouse-gas feedbacks from the land biosphere under future climate change scenarios. Nature Climate Change, 2013. 3(7): p. 666-672.
+          <a href="https://doi.org/10.1038/nclimate1864" target="_blank" rel="noopener noreferrer">[DOI]</a>
+        </li>
+        <li id="stocker2014">
+          Stocker, B.D., R. Spahni, and F. Joos, DYPTOP: a cost-efficient TOPMODEL implementation to simulate sub-grid spatio-temporal dynamics of global wetlands and peatlands. Geosci. Model Dev., 2014. 7(6): p. 3089-3110.
+          <a href="https://doi.org/10.5194/gmd-7-3089-2014" target="_blank" rel="noopener noreferrer">[DOI]</a>
+        </li>
+        <li id="strassmann2008">
+          Strassmann, K.M., F. Joos, and G. Fischer, Simulating effects of land use changes on carbon fluxes: past contributions to atmospheric CO<sub>2</sub> increases and future commitments due to losses of terrestrial sink capacity. Tellus Series B-Chemical and Physical Meteorology, 2008. 60(4): p. 583-603.
+          <a href="https://doi.org/10.1111/j.1600-0889.2008.00340.x" target="_blank" rel="noopener noreferrer">[DOI]</a>
+        </li>
+        <li id="sun2024">
+          Sun, Q., F. Joos, S. Lienert, S. Berthet, D. Carroll, C. Gong, A. Ito, A.K. Jain, S. Kou-Giesbrecht, A. Landolfi, M. Manizza, N. Pan, M. Prather, P. Regnier, L. Resplandy, R. Séférian, H. Shi, P. Suntharalingam, R.L. Thompson, H. Tian, N. Vuichard, S. Zaehle, and Q. Zhu, The Modeled Seasonal Cycles of Surface N<sub>2</sub>O Fluxes and Atmospheric N<sub>2</sub>O. Global Biogeochemical Cycles, 2024. 38(7): p. e2023GB008010.
+          <a href="https://doi.org/10.1029/2023GB008010" target="_blank" rel="noopener noreferrer">[DOI]</a>
+        </li>        
+        <li id="wania2009">
+          Wania, R., I. Ross, and I.C. Prentice, Integrating peatlands and permafrost into a dynamic global vegetation model: 1. Evaluation and sensitivity of physical land surface processes. Global Biogeochemical Cycles, 2009. 23(3).
+          <a href="https://doi.org/10.1029/2008GB003413" target="_blank" rel="noopener noreferrer">[DOI]</a>
+        </li>
+        <li id="xu-ri2008">
+          Xu-Ri, and I.C. Prentice, Terrestrial nitrogen cycle simulation in a dynamic global vegetation model. Global Biogeochemical Cycles, 2008. 22(4).
+          <a href="https://doi.org/10.1029/2007GB003067" target="_blank" rel="noopener noreferrer">[DOI]</a>
+        </li>
+      </ul>
+      
+    </section>
+    
+  </main>
+
+  <div id="footer"></div>
+
+</body>
+</html>

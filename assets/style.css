@@ -1,0 +1,452 @@
+/* @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;700&display=swap'); */
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@300;400;700&display=swap');
+
+/* Base styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth; /* Enables smooth scrolling */
+}
+
+body {
+  font-family: 'Roboto', Kaiti, sans-serif !important;
+  background-color: #121212; 
+  color: #cecece;
+}
+
+
+/* Header section (Hero) with gradient */
+header.hero {
+  background: linear-gradient(45deg, #4fdac2, #b666b2); /* Gradient from turquoise to blue */
+  color: white;
+  text-align: center;
+  padding: 1rem 0;
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.7); /* Adds depth */
+  border-bottom: 3px solid rgba(255, 255, 255, 0.2); /* Subtle bottom border */
+}
+
+header.hero h1 {
+  padding: 3rem 0 0 0;
+  font-size: 3rem;
+}
+
+header.hero p {
+  font-size: 1.2rem;
+  margin: 10px 0;
+}
+
+header.hero nav {
+  display: flex;
+  flex-wrap: wrap;
+  max-width: 1200px; 
+  justify-content: flex-start; /* Align nav items to the left */
+  margin: 0 auto; /* align to the max-width */
+  padding: 0 1rem; 
+}
+
+header.hero .nav-links {
+  margin-top: 1.5rem;
+  font-size: 1.2rem;
+  display: flex;
+  justify-content: flex-start; /* Align links to the left */
+  flex-wrap: wrap;
+  width: 100%;
+}
+
+header.hero .nav-links a {
+  color: white;
+  text-decoration: none;
+  margin: 0 15px; /* Space out links */
+  font-weight: bold;
+  padding: 10px;
+  position: relative;
+  padding-bottom: 5px;
+  display: inline-block;
+}
+
+header.hero .nav-links a:hover {
+  text-decoration: none;
+}
+
+header.hero .nav-links a::after {
+  content: "";
+  position: absolute;
+  left: 50%;
+  bottom: -2px;
+  width: 0;
+  height: 2px;
+  background-color: white;
+  transition: width 0.3s ease;
+  transform: translateX(-50%);
+}
+
+header.hero .nav-links a:hover::after,
+header.hero .nav-links a.active::after {
+  width: 100%; /* Keep both hover and active underlines fully expanded */
+}
+
+
+/* Main content */
+main {
+  padding: 3rem 1rem;
+  max-width: 1200px; /* Restrict width on large screens */
+  margin: 0 auto;
+}
+
+/* Preview section */
+.preview {
+  width: 100%; /* Let the preview box take full width of the container */
+  margin: 0 auto;
+  /* background-color: #54435e; */
+  border-radius: 12px; /* Slightly rounded corners */
+  padding: 0 1rem;
+  margin-bottom: 2rem;
+  box-shadow: 0 4px 12px #a87ec0;
+  transition: transform 0.3s ease-in-out;
+
+  max-width: 600px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  box-sizing: border-box;
+}
+.preview h2 {
+  color: #4fdac2; /* Bright accent */
+  margin: 0.5rem 0 1rem 0;
+  padding-bottom: 5px;
+}
+
+.preview p {
+  font-size: 1.1rem;
+  line-height: 1.8;
+  color: #ffffff;
+}
+.preview-container {
+  display: flex; /* Display sections next to each other */
+  gap: 1rem; /* Add space between the sections */
+  justify-content: space-between; /* Distribute space evenly */
+  flex-wrap: wrap; /* Allow sections to wrap to the next line */
+  flex-direction: column; /* Stack the preview boxes on top of each other */
+  align-items: center; /* Center the preview boxes */
+}
+.preview .button {
+  display: inline-flex; /* Align buttons horizontally */
+  width: auto; /* Prevent buttons from stretching */
+  max-width: 130px; /* Fixed width for each button */
+  padding: 12px 20px;
+  background-color: #4fdac2;
+  color: #1e1e1e; /* Dark text for contrast */
+  text-decoration: none;
+  border-radius: 8px; /* Softer button corners */
+  font-weight: bold;
+  margin: 15px 8px 15px 0;
+  box-shadow: 0 4px 8px rgba(79, 218, 194, 0.3);
+  transition: background-color 0.3s ease-in-out, transform 0.2s;
+}
+
+.preview .button-container {
+  display: flex; /* Make the button container flex */
+  justify-content: flex-start; /* Align buttons to the left */
+  gap: 1rem; /* Space between buttons */
+}
+.preview .button:hover {
+  background-color: #66fff2; /* Lighter cyan */
+  transform: translateY(-2px); /* Lift effect */
+}
+
+
+
+/* General page section */
+.page-section {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+
+.page-section h2 {
+  margin-bottom: 1rem;
+  padding-bottom: 5px;
+  color: #4fdac2;
+}
+
+.page-section h3 {
+  margin-top: 1rem;
+  padding-top: 10px;
+  font-size: 1.5rem;
+  color: rgb(200, 164, 253);
+}
+
+.page-section p {
+  font-size: 1.1rem;
+  color: #cecece;
+  line-height: 1.8;
+  /* background-color: #54435e; */
+}
+
+
+/* General link styles */
+a {
+  color: #4fdac2;  /* Normal link color */
+  text-decoration: none;
+  transition: color 0.3s ease-in-out;  /* Smooth color change */
+}
+
+a:hover {
+  color: #66fff2;  /* Brighter blue */
+  text-decoration: underline;
+}
+
+a:visited {
+  color: rgb(200, 164, 253);  /* Softer purple */
+}
+
+a:active {
+  color: #ffcc00;  /* Warm yellow */
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  margin: 0 auto;
+}
+
+.image-container {
+  margin-top: 1rem;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  flex-wrap: wrap;
+  position: relative;
+}
+
+.image-container img {
+  width: 49%;
+  aspect-ratio: 1 / 1;
+  position: relative;
+  top: 0;
+  left: 0;
+  object-fit: cover;
+  object-position: center;
+  border-radius: 10px;
+}
+
+/* Responsive adjustments for smaller screens */
+@media screen and (max-width: 768px) {
+  .image-container {
+      flex-direction: column; /* Stack images vertically */
+      gap: 5px; /* Reduce gap between stacked images */
+  }
+
+  .image-container img {
+      width: 100%;
+      height: width; /* Maintain aspect ratio */
+  }
+}
+
+/* Contact teaser in footer */
+.contact-teaser {
+  text-align: center;
+  font-size: 1.5rem;
+  color: #333;
+  padding-bottom: 2rem;
+}
+
+.contact-teaser a {
+  color: #00bcd4;
+  font-weight: bold;
+}
+
+.contact-teaser a:hover {
+  text-decoration: none;
+}
+
+/* Social links */
+.social-links i {
+  margin-right: 1rem;
+  font-size: 1.8rem;
+  color: #4fdac2;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.social-links a {
+  text-decoration: none;
+  display: inline-block;
+  font-size: 4rem;
+  color: #333;
+  transition: color 0.3s, transform 0.3s;
+}
+
+.social-links a:hover i {
+  color: #b666b2;
+  transform: scale(1.1);
+}
+
+.social-links a.hover-effect i {
+  color: #b666b2;
+  /* transform: scale(1.1); */
+}
+
+/* Bibliography styles */
+.bibliography {
+  background-color: #1e1e1e;
+  padding: 2rem;
+  border-radius: 8px;
+  margin-top: 2rem;
+  box-shadow: 0 4px 8px rgba(0, 255, 255, 0.1);
+  border-left: 5px solid #4fdac2;
+}
+
+.bibliography h2 {
+  color: #4fdac2;
+  border-bottom: 2px solid #4fdac2;
+  padding-bottom: 5px;
+}
+
+.bibliography ul {
+  list-style-type: disc;
+  padding-left: 20px;
+}
+
+.bibliography li {
+  font-size: 1rem;
+  line-height: 1.6;
+  margin-bottom: 1rem;
+  color: #cecece;
+}
+
+.bibliography a {
+  color: #4fdac2;
+  text-decoration: none;
+  font-weight: bold;
+  transition: color 0.3s ease-in-out;
+}
+
+.bibliography a:hover {
+  text-decoration: underline;
+  color: #66fff2;
+}
+
+/* Footer */
+footer {
+  text-align: center;
+  background-color: #333;
+  color: white;
+  padding: 1rem;
+}
+
+/* Decorative Divider */
+.decorative-divider {
+  position: relative;
+  display: flex; /* Keep the dividers centered */
+  justify-content: center;
+  align-items: center;
+  margin: 1rem 0;
+  font-size: 2rem;
+}
+
+.decorative-divider a {
+  display: block;           /* Ensure the anchor is block-level to wrap the image */
+  margin: 0;                /* Remove any default margin */
+  padding: 0;               /* Remove any default padding */
+}
+
+.decorative-divider a:hover .divider-image {
+  opacity: 0.8; /* Slight transparency when hovering */
+  transition: opacity 0.3s ease; /* Smooth transition */
+}
+
+.decorative-divider::after {
+  content: "";
+  position: absolute;
+  left: 50%;
+  bottom: -5px;
+  width: 0; /* Start with no width */
+  height: 2px; /* Line thickness */
+  background-color: white;
+  transition: width 0.3s ease, left 0.3s ease;
+  transform: translateX(-50%); /* Center the line */
+}
+
+.decorative-divider:hover::after {
+  width: 10%; /* Line expands to 2.5 times the width of the divider */
+  left: 50%;
+}
+
+.divider-icon {
+  padding: 0 1rem;
+  font-size: 1.5rem;
+  color: #4fdac2;
+}
+.divider-image {
+  max-width: 100%;          
+  height: auto;             
+  display: inline-block;    
+}
+/* Responsive Layout (Mobile) */
+@media (max-width: 768px) {
+  header.hero {
+      padding: 0.5rem 1rem;
+  }
+
+  header.hero h1 {
+      font-size: 2.5rem;
+  }
+
+  header.hero p,
+  .contact-teaser {
+      font-size: 1rem;
+  }
+
+  header.hero nav {
+      padding: 0px;
+      font-size: 1rem;
+  }
+  header.hero .nav-links {
+    margin-top: 1.5rem;
+    font-size: 1rem;
+  }
+  .preview {
+      padding: 0 1rem;
+  }
+}
+
+/* Mobile-first adjustments for smaller devices */
+@media (max-width: 480px) {
+  header.hero {
+    padding: 0.5rem 1rem;
+  }
+  header.hero h1 {
+      font-size: 2rem;
+  }
+
+  header.hero p {
+      font-size: 0.8rem;
+  }
+
+  header.hero nav {
+      padding: 0px;
+      font-size: 1rem;
+  }
+  header.hero .nav-links {
+    margin-top: 1.5rem;
+    font-size: 1rem;
+  }
+  .preview {
+      padding: 0 1rem;
+  }
+  .page-section p {
+    font-size: 1rem;
+  }
+  .bibliography li {
+    font-size: 0.9rem;
+  }
+}

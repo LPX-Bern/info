@@ -147,23 +147,26 @@ main {
   align-items: center; /* Center the preview boxes */
 }
 .preview .button {
-  display: inline-flex; /* Align buttons horizontally */
-  width: auto; /* Prevent buttons from stretching */
-  max-width: 130px; 
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 130px; /* Set a fixed or consistent width */
   padding: 12px 20px;
   background-color: var(--secondary-color);
   color: var(--background-color);
   text-decoration: none;
-  border-radius: 8px; /* Softer button corners */
+  border-radius: 8px;
   font-weight: bold;
   margin: 15px 8px 15px 0;
   transition: background-color 0.3s ease-in-out, transform 0.2s;
+  text-align: center;
+  white-space: nowrap; /* Prevent text from wrapping */
 }
 
 .preview .button-container {
-  display: flex; /* Make the button container flex */
-  justify-content: flex-start; /* Align buttons to the left */
-  gap: 1rem; 
+  display: flex;
+  justify-content: flex-start;
+  gap: 1rem;
 }
 .preview .button:hover {
   background-color: var(--primary-color2); 
@@ -186,8 +189,8 @@ main {
 .page-section h3 {
   margin-top: 1rem;
   padding-top: 10px;
-  font-size: 1.5rem;
-  color: var(--primary-color2);
+  font-size: 1.1rem;
+  color: var(--secondary-color);
 }
 
 .page-section p {
@@ -389,6 +392,7 @@ footer {
 .divider-icon {
   padding: 0 1rem;
   font-size: 1.5rem;
+  color: var(--secondary-color);
 }
 .divider-image {
   max-width: 100%;          

@@ -2,6 +2,21 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@300;400;700&display=swap');
 
+:root {
+  --primary-color: #490946;
+  --primary-color2: #a87ec0; 
+  --primary-color3: #d6aeec; 
+  --secondary-color: #ebf3cf;
+  --highlight-color: #ffcc00;
+  --text-color: #cecece;
+  --text-color2: #ffffff;
+  --background-color: black;
+  --subtle-shadow: #ebf3cf2c;
+  --footer-background-color: #333;
+  --footer-text-color: white;
+  --header-text-color: white;
+}
+
 /* Base styles */
 * {
   margin: 0;
@@ -15,18 +30,18 @@ html {
 
 body {
   font-family: 'Roboto', Kaiti, sans-serif !important;
-  background-color: #121212; 
-  color: #cecece;
+  background-color: var(--background-color); 
+  color: var(--text-color);
 }
 
 
 /* Header section (Hero) with gradient */
 header.hero {
-  background: linear-gradient(45deg, #4fdac2, #b666b2); /* Gradient from turquoise to blue */
-  color: white;
+  background: linear-gradient(45deg, var(--primary-color), var(--secondary-color)); 
+  color: var(--header-text-color);
   text-align: center;
   padding: 1rem 0;
-  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.7); /* Adds depth */
+  box-shadow: 0 6px 15px var(--background-color); /* Adds depth */
   border-bottom: 3px solid rgba(255, 255, 255, 0.2); /* Subtle bottom border */
 }
 
@@ -90,7 +105,6 @@ header.hero .nav-links a.active::after {
   width: 100%; /* Keep both hover and active underlines fully expanded */
 }
 
-
 /* Main content */
 main {
   padding: 3rem 1rem;
@@ -100,15 +114,13 @@ main {
 
 /* Preview section */
 .preview {
-  width: 100%; /* Let the preview box take full width of the container */
+  width: 100%; 
   margin: 0 auto;
-  /* background-color: #54435e; */
   border-radius: 12px; /* Slightly rounded corners */
   padding: 0 1rem;
   margin-bottom: 2rem;
-  box-shadow: 0 4px 12px #a87ec0;
+  box-shadow: 0 4px 12px var(--primary-color2); 
   transition: transform 0.3s ease-in-out;
-
   max-width: 600px;
   display: flex;
   flex-direction: column;
@@ -116,15 +128,15 @@ main {
   box-sizing: border-box;
 }
 .preview h2 {
-  color: #4fdac2; /* Bright accent */
-  margin: 0.5rem 0 1rem 0;
+  color: var(--secondary-color); /* Bright accent */
+  margin: 1rem 0rem 1rem 0;
   padding-bottom: 5px;
 }
 
 .preview p {
   font-size: 1.1rem;
   line-height: 1.8;
-  color: #ffffff;
+  color: var(--text-color);
 }
 .preview-container {
   display: flex; /* Display sections next to each other */
@@ -137,29 +149,26 @@ main {
 .preview .button {
   display: inline-flex; /* Align buttons horizontally */
   width: auto; /* Prevent buttons from stretching */
-  max-width: 130px; /* Fixed width for each button */
+  max-width: 130px; 
   padding: 12px 20px;
-  background-color: #4fdac2;
-  color: #1e1e1e; /* Dark text for contrast */
+  background-color: var(--secondary-color);
+  color: var(--background-color);
   text-decoration: none;
   border-radius: 8px; /* Softer button corners */
   font-weight: bold;
   margin: 15px 8px 15px 0;
-  box-shadow: 0 4px 8px rgba(79, 218, 194, 0.3);
   transition: background-color 0.3s ease-in-out, transform 0.2s;
 }
 
 .preview .button-container {
   display: flex; /* Make the button container flex */
   justify-content: flex-start; /* Align buttons to the left */
-  gap: 1rem; /* Space between buttons */
+  gap: 1rem; 
 }
 .preview .button:hover {
-  background-color: #66fff2; /* Lighter cyan */
+  background-color: var(--primary-color2); 
   transform: translateY(-2px); /* Lift effect */
 }
-
-
 
 /* General page section */
 .page-section {
@@ -171,42 +180,41 @@ main {
 .page-section h2 {
   margin-bottom: 1rem;
   padding-bottom: 5px;
-  color: #4fdac2;
+  color: var(--secondary-color);
 }
 
 .page-section h3 {
   margin-top: 1rem;
   padding-top: 10px;
   font-size: 1.5rem;
-  color: rgb(200, 164, 253);
+  color: var(--primary-color2);
 }
 
 .page-section p {
   font-size: 1.1rem;
-  color: #cecece;
+  color: var(--text-color);
   line-height: 1.8;
-  /* background-color: #54435e; */
 }
 
 
 /* General link styles */
 a {
-  color: #4fdac2;  /* Normal link color */
+  color: var(--secondary-color);  /* Normal link color */
   text-decoration: none;
   transition: color 0.3s ease-in-out;  /* Smooth color change */
 }
 
 a:hover {
-  color: #66fff2;  /* Brighter blue */
+  color: var(--primary-color3);  /* Brighter blue */
   text-decoration: underline;
 }
 
 a:visited {
-  color: rgb(200, 164, 253);  /* Softer purple */
+  color: var(--primary-color2);  /* Softer purple */
 }
 
 a:active {
-  color: #ffcc00;  /* Warm yellow */
+  color: var(--highlight-color);  /* Warm yellow */
 }
 
 img {
@@ -254,12 +262,10 @@ img {
 .contact-teaser {
   text-align: center;
   font-size: 1.5rem;
-  color: #333;
   padding-bottom: 2rem;
 }
 
 .contact-teaser a {
-  color: #00bcd4;
   font-weight: bold;
 }
 
@@ -271,7 +277,7 @@ img {
 .social-links i {
   margin-right: 1rem;
   font-size: 1.8rem;
-  color: #4fdac2;
+  color: var(--secondary-color);
   display: flex;
   justify-content: space-around;
   align-items: center;
@@ -281,33 +287,32 @@ img {
   text-decoration: none;
   display: inline-block;
   font-size: 4rem;
-  color: #333;
   transition: color 0.3s, transform 0.3s;
 }
 
 .social-links a:hover i {
-  color: #b666b2;
+  color: var(--primary-color2);
   transform: scale(1.1);
 }
 
 .social-links a.hover-effect i {
-  color: #b666b2;
+  color: var(--primary-color);
   /* transform: scale(1.1); */
 }
 
 /* Bibliography styles */
 .bibliography {
-  background-color: #1e1e1e;
+  background-color: var(--background-color);
   padding: 2rem;
   border-radius: 8px;
   margin-top: 2rem;
-  box-shadow: 0 4px 8px rgba(0, 255, 255, 0.1);
-  border-left: 5px solid #4fdac2;
+  box-shadow: 0 4px 8px var(--subtle-shadow);
+  border-left: 5px solid var(--secondary-color);
 }
 
 .bibliography h2 {
-  color: #4fdac2;
-  border-bottom: 2px solid #4fdac2;
+  color: var(--secondary-color);
+  border-bottom: 2px solid var(--secondary-color);
   padding-bottom: 5px;
 }
 
@@ -320,11 +325,11 @@ img {
   font-size: 1rem;
   line-height: 1.6;
   margin-bottom: 1rem;
-  color: #cecece;
+  color: var(--text-color);
 }
 
 .bibliography a {
-  color: #4fdac2;
+  color: var(--secondary-color);
   text-decoration: none;
   font-weight: bold;
   transition: color 0.3s ease-in-out;
@@ -332,14 +337,14 @@ img {
 
 .bibliography a:hover {
   text-decoration: underline;
-  color: #66fff2;
+  color: var(--primary-color2);
 }
 
 /* Footer */
 footer {
   text-align: center;
-  background-color: #333;
-  color: white;
+  background-color: var(footer-background-color);
+  color: var(footer-text-color);
   padding: 1rem;
 }
 
@@ -384,13 +389,13 @@ footer {
 .divider-icon {
   padding: 0 1rem;
   font-size: 1.5rem;
-  color: #4fdac2;
 }
 .divider-image {
   max-width: 100%;          
   height: auto;             
   display: inline-block;    
 }
+
 /* Responsive Layout (Mobile) */
 @media (max-width: 768px) {
   header.hero {

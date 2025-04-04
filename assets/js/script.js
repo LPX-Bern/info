@@ -16,6 +16,20 @@ fetch('include/header.html')
 .then(data => {
     document.getElementById('header').innerHTML = data;
     highlightActiveNavLink(); // Call function after header is inserted
+  // Inject Google Analytics after loading header
+  let script = document.createElement('script');
+  script.async = true;
+  script.src = "https://www.googletagmanager.com/gtag/js?id=G-MJ1YXDR16Q";
+  document.head.appendChild(script);
+
+  let inlineScript = document.createElement('script');
+  inlineScript.innerHTML = `
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-MJ1YXDR16Q');
+  `;
+  document.head.appendChild(inlineScript);
 })
 .catch(error => console.error('Header fetch error:', error));
 

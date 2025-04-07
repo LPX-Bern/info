@@ -51,7 +51,7 @@ header.hero h1 {
 }
 
 header.hero p {
-  font-size: 1.2rem;
+  font-size: 1rem;
   margin: 10px 0;
 }
 
@@ -453,7 +453,7 @@ footer {
       padding: 0 1rem;
   }
   .page-section p {
-    font-size: 1rem;
+    font-size: 0.8rem;
   }
   .bibliography li {
     font-size: 0.9rem;

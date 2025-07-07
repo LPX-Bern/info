@@ -331,6 +331,20 @@ img {
   color: var(--text-color);
 }
 
+.page-section ul {
+  list-style-type: disc;
+  padding-left: 30px;
+}
+
+.page-section li {
+  font-size: 1rem;
+  line-height: 1.6;
+  padding-left: 10px;
+  margin-top: 0.5rem;
+  margin-bottom: 0.5rem;
+  color: var(--text-color);
+}
+
 .bibliography a {
   color: var(--secondary-color);
   text-decoration: none;
@@ -392,7 +406,7 @@ footer {
 .divider-icon {
   padding: 0 1rem;
   font-size: 1.5rem;
-  color: var(--secondary-color);
+  color: var(--primary-color3);
 }
 .divider-image {
   max-width: 100%;          
@@ -454,6 +468,9 @@ footer {
   }
   .page-section p {
     font-size: 0.8rem;
+  }
+  .page-section li {
+    font-size: 0.9rem;
   }
   .bibliography li {
     font-size: 0.9rem;
